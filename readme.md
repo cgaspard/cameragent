@@ -25,32 +25,32 @@ This repository contains Docker containers for streaming video from an ESP32 cam
 
 Pull the images from Docker Hub:
 
-\```bash
+``` bash
 docker pull cjgaspard/esp32-hls-ffmpeg
 docker pull cjgaspard/esp32-hls-gstreamer
-\```
+```
 
 ### Running the Containers
 
 Run the FFmpeg container:
 
-\```bash
+```bash
 docker run -d \
     --name esp32-ffmpeg \
     -p 8080:80 \
     -e ESP32_CAM_URL="http://your_esp32_cam_address" \
     cjgaspard/esp32-hls-ffmpeg
-\```
+```
 
 Run the GStreamer container:
 
-\```bash
+```bash
 docker run -d \
     --name esp32-gstreamer \
     -p 8081:80 \
     -e ESP32_CAM_URL="http://your_esp32_cam_address" \
     cjgaspard/esp32-hls-gstreamer
-\```
+```
 
 ## Configuration
 
