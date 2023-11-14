@@ -1,0 +1,26 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DASH Stream Test</title>
+    <!-- Include dash.js from CDN for DASH playback -->
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+    <style>
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <video id="videoPlayer" controls></video>
+    <script>
+        (function(){
+            var url = '/data/dash/manifest.mpd'; // Replace with your DASH manifest URL
+            var player = dashjs.MediaPlayer().create();
+            player.initialize(document.querySelector("#videoPlayer"), url, true);
+        })();
+    </script>
+</body>
+</html>
